@@ -4,6 +4,9 @@ CountdownTimerView is a timer with rounded indicator based on UIView.
 The repository contains example application with proposition of use and configure.
 Project is written in Swift 3.
 
+![Alt preview](http://i.imgur.com/OqMvYXI.png)
+![Alt preview](http://i.imgur.com/ZTTV7CD.gif)
+
 # Installation
 
 ## Manually
@@ -16,7 +19,7 @@ Just copy files from <i>Sources</i> to your project.
 
 Add to your ViewController an UIView and set its class as CountdownTimerView
 
-[IMAGE]
+![Alt embeding](http://i.imgur.com/PPceWX8.gif)
 
 ## Configuration
 
