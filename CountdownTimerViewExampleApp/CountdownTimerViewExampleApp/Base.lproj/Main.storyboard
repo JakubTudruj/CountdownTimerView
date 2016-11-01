@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CountdownTimerViewExampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dMP-Id-5Xd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3t-tP-0Ea">
+                                <rect key="frame" x="10" y="30" width="355" height="159"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxs-5M-6Lg" customClass="CountdownTimerView" customModule="CountdownTimerViewExampleApp" customModuleProvider="target">
+                                        <rect key="frame" x="128" y="30" width="100" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="ROY-RO-Ghb"/>
+                                            <constraint firstAttribute="height" constant="100" id="ogO-io-M0r"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="labelBackground">
+                                                <color key="value" red="1" green="0.1639977943" blue="0.69047512310000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLX-AL-7fA">
+                                        <rect key="frame" x="279" y="0.0" width="60" height="53"/>
+                                        <state key="normal" title="1:20:00"/>
+                                        <connections>
+                                            <action selector="hourButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z5C-E8-YvJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="que-zf-Lo0">
+                                        <rect key="frame" x="279" y="53" width="60" height="53"/>
+                                        <state key="normal" title="3:00"/>
+                                        <connections>
+                                            <action selector="minuteButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THT-RR-fe5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvO-i8-7dI">
+                                        <rect key="frame" x="279" y="106" width="60" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="UkU-aX-7rT"/>
+                                        </constraints>
+                                        <state key="normal" title="0:10"/>
+                                        <connections>
+                                            <action selector="secondsButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMS-7q-1RL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhn-EQ-Wxf">
+                                        <rect key="frame" x="16" y="0.0" width="112" height="79.5"/>
+                                        <state key="normal" title="START!"/>
+                                        <connections>
+                                            <action selector="startButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILm-Qx-xA6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAt-Ir-UQJ">
+                                        <rect key="frame" x="0.0" y="79.5" width="128" height="79.5"/>
+                                        <state key="normal" title="STOP!"/>
+                                        <connections>
+                                            <action selector="stopButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="23R-Cn-Nym"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="UAt-Ir-UQJ" firstAttribute="top" secondItem="Fhn-EQ-Wxf" secondAttribute="bottom" id="EYG-SS-uqV"/>
+                                    <constraint firstItem="jxs-5M-6Lg" firstAttribute="leading" secondItem="Fhn-EQ-Wxf" secondAttribute="trailing" id="NbT-bV-Ggi"/>
+                                    <constraint firstItem="YvO-i8-7dI" firstAttribute="top" secondItem="que-zf-Lo0" secondAttribute="bottom" id="QDc-tI-LhT"/>
+                                    <constraint firstAttribute="bottom" secondItem="YvO-i8-7dI" secondAttribute="bottom" id="T0w-oE-jui"/>
+                                    <constraint firstItem="YvO-i8-7dI" firstAttribute="width" secondItem="que-zf-Lo0" secondAttribute="width" id="VBd-wC-POr"/>
+                                    <constraint firstItem="jxs-5M-6Lg" firstAttribute="centerY" secondItem="D3t-tP-0Ea" secondAttribute="centerY" id="VPD-hQ-dg0"/>
+                                    <constraint firstItem="UAt-Ir-UQJ" firstAttribute="leading" secondItem="D3t-tP-0Ea" secondAttribute="leading" id="W4G-Nf-tu9"/>
+                                    <constraint firstItem="jxs-5M-6Lg" firstAttribute="centerX" secondItem="D3t-tP-0Ea" secondAttribute="centerX" id="W7O-AL-Yd2"/>
+                                    <constraint firstItem="que-zf-Lo0" firstAttribute="top" secondItem="MLX-AL-7fA" secondAttribute="bottom" id="XRw-Eg-yw6"/>
+                                    <constraint firstItem="YvO-i8-7dI" firstAttribute="height" secondItem="que-zf-Lo0" secondAttribute="height" id="aU0-4i-kep"/>
+                                    <constraint firstItem="jxs-5M-6Lg" firstAttribute="leading" secondItem="UAt-Ir-UQJ" secondAttribute="trailing" id="dbg-gi-7tS"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="YvO-i8-7dI" secondAttribute="trailing" constant="8" id="e6q-Ix-gWU"/>
+                                    <constraint firstAttribute="height" constant="158.5" id="fTn-FU-Dvj"/>
+                                    <constraint firstItem="que-zf-Lo0" firstAttribute="height" secondItem="MLX-AL-7fA" secondAttribute="height" id="gLJ-Nj-73P"/>
+                                    <constraint firstItem="UAt-Ir-UQJ" firstAttribute="height" secondItem="Fhn-EQ-Wxf" secondAttribute="height" id="iG8-GE-HwF"/>
+                                    <constraint firstAttribute="bottom" secondItem="UAt-Ir-UQJ" secondAttribute="bottom" id="inR-lP-21F"/>
+                                    <constraint firstItem="que-zf-Lo0" firstAttribute="width" secondItem="MLX-AL-7fA" secondAttribute="width" id="mO8-Eb-eaV"/>
+                                    <constraint firstItem="Fhn-EQ-Wxf" firstAttribute="leading" secondItem="D3t-tP-0Ea" secondAttribute="leadingMargin" constant="8" id="mvD-p4-o6C"/>
+                                    <constraint firstItem="MLX-AL-7fA" firstAttribute="top" secondItem="D3t-tP-0Ea" secondAttribute="top" id="o16-fj-GPr"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="que-zf-Lo0" secondAttribute="trailing" constant="8" id="rw2-Xm-CoY"/>
+                                    <constraint firstItem="Fhn-EQ-Wxf" firstAttribute="top" secondItem="D3t-tP-0Ea" secondAttribute="top" id="rwB-iR-EGE"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="MLX-AL-7fA" secondAttribute="trailing" constant="8" id="yiZ-Iv-Smz"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning! Timer is ending!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W89-La-eVj">
+                                <rect key="frame" x="16" y="189" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D3t-tP-0Ea" firstAttribute="leading" secondItem="dMP-Id-5Xd" secondAttribute="leading" constant="10" id="DTI-MO-6gF"/>
+                            <constraint firstItem="W89-La-eVj" firstAttribute="top" secondItem="D3t-tP-0Ea" secondAttribute="bottom" id="RH9-Cx-4ld"/>
+                            <constraint firstAttribute="trailing" secondItem="D3t-tP-0Ea" secondAttribute="trailing" constant="10" id="cHU-0w-D1a"/>
+                            <constraint firstItem="W89-La-eVj" firstAttribute="leading" secondItem="dMP-Id-5Xd" secondAttribute="leadingMargin" id="ggb-iQ-doT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W89-La-eVj" secondAttribute="trailing" id="qyE-6E-N3V"/>
+                            <constraint firstItem="D3t-tP-0Ea" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="tLF-ot-zgG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countDownView" destination="jxs-5M-6Lg" id="q7F-ks-zsM"/>
+                        <outlet property="startButton" destination="Fhn-EQ-Wxf" id="S4M-WT-XRi"/>
+                        <outlet property="warningLabel" destination="W89-La-eVj" id="ouE-lW-xuO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
