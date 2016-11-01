@@ -67,7 +67,6 @@ extension NSNotification.Name {
         }
     }
     
-    
     public var delegate: CountdownTimerDelegate?
     
     //MARK: appereance
@@ -111,7 +110,7 @@ extension NSNotification.Name {
     private let circularIndicatorView = CircularLoaderView(frame: CGRect.zero)
     private var timerActual: Double!
     private var timer: Timer = Timer()
-    private var timerLabel: UILabel!
+    private var timerLabel: UILabel = UILabel()
 
     //MARK: - public methods
     public func startNewTimer(seconds: Int) {
@@ -162,11 +161,6 @@ extension NSNotification.Name {
     }
     
     //MARK: - system methods
-    override internal func awakeFromNib() {
-        super.awakeFromNib()
-        self.circularIndicatorView.progress = 1
-        self.timerActual = Double(self.secondsToCountdown)
-    }
     
     override internal func layoutSubviews() {
         super.layoutSubviews()
@@ -226,15 +220,15 @@ extension NSNotification.Name {
     internal func setup() {
         self.backgroundColor = UIColor.clear
         self.addSubview(self.circularIndicatorView)
-        self.setupTimerLabel()
+        self.timerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         self.addSubview(self.timerLabel)
+        self.setupTimerLabel()
     }
     
     internal func setupTimerLabel() {
-        self.timerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         self.timerLabel.textAlignment = .center
-            self.timerLabel.textColor = self.labelColor
-            self.timerLabel.font = self.labelFont
+        self.timerLabel.textColor = self.labelColor
+        self.timerLabel.font = self.labelFont
     }
     
     internal func setupCircularIndicatorView() {
