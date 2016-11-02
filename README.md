@@ -23,7 +23,7 @@ Add to your ViewController an UIView and set its class as CountdownTimerView
 
 ## Configuration
 
-Make IBOutlet of the UIVIew and set few properties
+Make IBOutlet of the UIVIew (e.g. ``` timerView ```) and set few properties
 
 ### Appereance
 
